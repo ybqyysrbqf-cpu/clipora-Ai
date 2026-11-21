@@ -1,26 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#090910"><title>Clipora AI — Turn long videos into standout clips</title>
-<style>
-:root{--bg:#090910;--panel:#11111c;--panel2:#171726;--line:#29283b;--text:#f5f3ff;--muted:#a4a1b8;--purple:#8b5cf6;--blue:#5b8cff;--green:#45d6a0}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 75% -10%,#29204c 0,transparent 38%),var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}button,input{font:inherit}a{color:inherit;text-decoration:none}.wrap{max-width:1160px;margin:auto;padding:0 24px}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff12}.brand{font-size:23px;font-weight:850;letter-spacing:-1px}.brand span{color:#a78bfa}.brand small{font-size:10px;color:#aaa1c8;letter-spacing:2px;margin-left:5px}.navlinks{display:flex;gap:26px;color:var(--muted);align-items:center}.btn{border:0;border-radius:12px;padding:12px 18px;color:white;background:linear-gradient(110deg,var(--purple),var(--blue));font-weight:700;cursor:pointer;box-shadow:0 8px 28px #7852d633}.btn.secondary{background:#ffffff0b;border:1px solid var(--line);box-shadow:none}.hero{padding:78px 0 48px;text-align:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border:1px solid #8b5cf655;background:#8b5cf612;border-radius:99px;color:#c8b5ff;font-size:12px;font-weight:700}.hero h1{font-size:clamp(40px,7vw,72px);line-height:1.02;letter-spacing:-3.5px;margin:22px auto 18px;max-width:850px}.gradient{background:linear-gradient(100deg,#c4a5ff,#8c9eff 65%,#6ee7d2);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:620px;margin:0 auto;color:var(--muted);font-size:17px}.actions{display:flex;justify-content:center;gap:12px;margin:28px 0 48px;flex-wrap:wrap}.workspace{max-width:900px;margin:0 auto 80px;background:linear-gradient(145deg,#171627,#10101a);border:1px solid #ffffff1b;border-radius:22px;padding:22px;box-shadow:0 30px 90px #0008}.workspace-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.workspace-head strong{font-size:16px}.badge{font-size:11px;color:#8ce8c4;background:#45d6a015;border:1px solid #45d6a044;border-radius:99px;padding:5px 9px}.drop{border:1.5px dashed #77709c;border-radius:17px;padding:42px 20px;text-align:center;background:linear-gradient(135deg,#8b5cf60b,#5b8cff0b)}.upload-icon{width:54px;height:54px;border-radius:17px;margin:0 auto 14px;display:grid;place-items:center;background:#8b5cf622;font-size:25px}.drop h3{margin:0 0 5px}.drop p{margin:0 0 18px;color:var(--muted);font-size:13px}.hint{color:#8f8ba5;font-size:11px;margin-top:13px}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:10px 0 76px}.card{background:#11111c;border:1px solid var(--line);border-radius:17px;padding:22px}.ico{font-size:23px}.card h3{margin:12px 0 6px}.card p{color:var(--muted);font-size:13px;margin:0}.section-title{text-align:center;margin:0 0 26px;font-size:30px;letter-spacing:-1px}.footer{border-top:1px solid #ffffff12;padding:26px 0;color:#817d96;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.modal{display:none;position:fixed;inset:0;background:#05050bdc;z-index:9;place-items:center;padding:18px}.modal.open{display:grid}.modalbox{width:min(480px,100%);background:#171625;border:1px solid var(--line);border-radius:20px;padding:24px}.modalbox h2{margin:0 0 8px}.modalbox p{color:var(--muted);font-size:13px}.modalbox input{width:100%;padding:13px;background:#0c0c15;color:white;border:1px solid var(--line);border-radius:10px;margin:8px 0 14px}.status{display:none;margin-top:14px;padding:12px;border-radius:10px;background:#45d6a014;color:#8ce8c4;font-size:13px}.status.show{display:block}
-@media(max-width:700px){.wrap{padding:0 16px}.nav{height:66px}.navlinks a:not(.btn){display:none}.hero{padding:58px 0 32px}.hero h1{letter-spacing:-2px}.hero p{font-size:15px}.workspace{padding:14px;margin-bottom:58px}.drop{padding:32px 14px}.features{grid-template-columns:1fr;padding-bottom:50px}.footer{display:block}.footer span{display:block;margin:5px 0}}
-</style></head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090a12">
+  <title>Clipora AI — Turn long videos into standout clips</title>
+  <meta name="description" content="Clipora AI helps turn long videos into short-form content.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
 <body>
-<header class="wrap nav"><a class="brand" href="#">clipora<span>.</span><small>AI</small></a><nav class="navlinks"><a href="#features">Features</a><a href="#how">How it works</a><a class="btn secondary" href="studio.html">Studio ↗</a><button class="btn" onclick="openModal()">Get started</button></nav></header>
-<main class="wrap">
-<section class="hero"><div class="eyebrow">✦ AI VIDEO REPURPOSING · FREE TO START</div><h1>One long video.<br><span class="gradient">Endless standout clips.</span></h1><p>Turn podcasts, interviews and videos into short-form content made for Reels, Shorts and TikTok — with less editing and more creating.</p><div class="actions"><button class="btn" onclick="document.getElementById('videoFile').click()">＋ Upload a video</button><a class="btn secondary" href="#features">Explore features</a></div></section>
-<section class="workspace" id="upload"><div class="workspace-head"><strong>✦ Create your first clips</strong><span class="badge">FREE WORKSPACE</span></div><div class="drop" id="drop" onclick="document.getElementById('videoFile').click()"><div class="upload-icon">⇧</div><h3>Drop your video here</h3><p>or browse files from your device</p><button class="btn" type="button">Choose video</button><div class="hint">MP4 · MOV · WEBM · Works on iPhone, Android, tablet and desktop</div><input id="videoFile" type="file" accept="video/*" hidden></div><div id="uploadStatus" class="status"></div></section>
-<section id="features"><h2 class="section-title">Everything you need to go from long to short</h2><div class="features"><article class="card"><div class="ico">✂️</div><h3>Smart clip discovery</h3><p>Find engaging moments in longer recordings and turn them into short clip candidates.</p></article><article class="card"><div class="ico">💬</div><h3>Auto captions</h3><p>Generate readable subtitles and customise the look of your captions.</p></article><article class="card"><div class="ico">▣</div><h3>Vertical reframing</h3><p>Prepare portrait 9:16 clips for Reels, Shorts and TikTok.</p></article></div></section>
-<section id="how" style="text-align:center;padding:0 0 70px"><h2 class="section-title">Your workflow, simplified.</h2><p style="color:var(--muted)">Upload a video → choose your format → review clips → export and share.</p></section>
-</main><footer class="wrap footer"><span>© 2026 Clipora AI. Made for creators.</span><span>Free while we build. Paid plans may arrive later.</span></footer>
-<div class="modal" id="modal"><div class="modalbox"><button style="float:right;background:none;color:#aaa;border:0;font-size:22px;cursor:pointer" onclick="closeModal()">×</button><h2>Welcome to Clipora</h2><p>Account creation will be connected when authentication is configured. For now, try the upload interface.</p><input placeholder="Email address" type="email"><button class="btn" onclick="alert('Sign-in is a demo placeholder. Connect Supabase Auth to enable accounts.')">Continue</button></div></div>
-<script>
-const input=document.getElementById('videoFile'), statusBox=document.getElementById('uploadStatus'), drop=document.getElementById('drop');
-input.addEventListener('change',()=>{if(!input.files.length)return;const f=input.files[0];statusBox.className='status show';statusBox.textContent='Selected: '+f.name+' ('+(f.size/1024/1024).toFixed(1)+' MB). Upload preview works locally; AI clip generation needs the processing backend to be connected.';});
-['dragenter','dragover'].forEach(e=>drop.addEventListener(e,ev=>{ev.preventDefault();drop.style.borderColor='#a78bfa'}));
-['dragleave','drop'].forEach(e=>drop.addEventListener(e,ev=>{ev.preventDefault();drop.style.borderColor='#77709c';if(e==='drop'&&ev.dataTransfer.files.length){input.files=ev.dataTransfer.files;input.dispatchEvent(new Event('change'));}}));
-function openModal(){document.getElementById('modal').classList.add('open')}function closeModal(){document.getElementById('modal').classList.remove('open')}
-</script></body></html>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#"><span class="brand-mark">C</span><span>clipora<span class="brand-ai">AI</span></span></a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav>
+        <button class="nav-item active" data-view="home"><span>▦</span> Overview</button>
+        <button class="nav-item" data-view="editor"><span>✂</span> Clip editor</button>
+        <button class="nav-item" data-view="library"><span>▤</span> My projects</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="plan-card"><div class="plan-icon">✦</div><b>Creator workspace</b><p>Local preview mode</p><span class="plan-tag">FREE PREVIEW</span></div>
+        <div class="profile"><div class="avatar">C</div><div><b>My workspace</b><small>Personal account</small></div><span class="dots">•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="crumb">Workspace <span>/</span> <b id="crumbName">Overview</b></div>
+        <div class="top-actions"><span class="status-dot"></span><span class="status-text">Workspace ready</span><button class="help-btn" id="helpBtn">Help</button></div>
+      </header>
+
+      <section class="view active-view" id="homeView">
+        <div class="welcome-row">
+          <div><div class="eyebrow">YOUR CREATIVE WORKSPACE</div><h1>Make every moment <span class="gradient-text">count.</span></h1><p class="subhead">Bring in a video, find your best moments, and shape them into clips.</p></div>
+          <div class="date-pill"><span class="live-dot"></span> Your studio is ready</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-glow"></div>
+          <div class="hero-copy"><div class="hero-kicker">START CREATING</div><h2>One long video.<br><span>More ways to share.</span></h2><p>Upload a video to preview it and prepare clips for your channels.</p><button class="primary-btn" id="uploadCta">＋ Upload a video <span>→</span></button><div class="support-line">MP4 · MOV · WEBM · Up to 500 MB recommended</div></div>
+          <div class="hero-art"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="video-tile"><div class="tile-top"><span>CLIPORA STUDIO</span><span>✦</span></div><div class="tile-play">▶</div><div class="tile-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="tile-bottom"><span>YOUR NEXT CLIP</span><b>9:16</b></div></div></div>
+        </div>
+        <div class="section-heading"><div><h3>Quick start</h3><p>Everything you need to get moving.</p></div></div>
+        <div class="quick-grid">
+          <button class="quick-card" id="quickUpload"><span class="quick-icon purple">↑</span><b>Upload video</b><small>Choose a video from your device</small><span class="card-arrow">↗</span></button>
+          <button class="quick-card" data-open="editor"><span class="quick-icon blue">✂</span><b>Open clip editor</b><small>Trim a segment from your video</small><span class="card-arrow">↗</span></button>
+          <button class="quick-card" data-open="library"><span class="quick-icon pink">▤</span><b>View projects</b><small>Continue with a recent project</small><span class="card-arrow">↗</span></button>
+        </div>
+        <div class="notice"><span class="notice-icon">ⓘ</span><div><b>Preview version</b><p>Uploading and previewing work in your browser. AI highlight detection, cloud sync, and automatic subtitle generation are not connected yet.</p></div></div>
+      </section>
+
+      <section class="view" id="editorView">
+        <div class="page-heading"><div><div class="eyebrow">CLIP WORKSPACE</div><h1>Clip editor</h1><p class="subhead">Choose a video and prepare a segment.</p></div><button class="outline-btn" id="editorUpload">＋ Choose video</button></div>
+        <div class="editor-layout">
+          <div class="preview-panel">
+            <div class="panel-top"><b>Preview</b><span id="previewState">No video selected</span></div>
+            <div class="video-stage" id="videoStage"><div class="empty-preview"><div class="empty-play">▶</div><b>Your video preview</b><p>Choose a video to see it here.</p><button class="secondary-btn" id="emptyUpload">Choose video</button></div><video id="video" controls playsinline></video></div>
+            <div class="video-meta"><div><b id="videoName">No file selected</b><small id="videoInfo">Your selected video stays on this device.</small></div><span class="format-pill">LOCAL</span></div>
+          </div>
+          <div class="settings-panel">
+            <div class="panel-top"><b>Clip settings</b><span class="step-label">STEP 01</span></div>
+            <label class="field-label" for="clipTitle">Clip name</label><input id="clipTitle" class="text-input" value="My first clip" maxlength="60">
+            <div class="two-fields"><div><label class="field-label" for="startTime">Start (seconds)</label><input id="startTime" class="text-input" type="number" min="0" step="0.1" value="0"></div><div><label class="field-label" for="endTime">End (seconds)</label><input id="endTime" class="text-input" type="number" min="0" step="0.1" value="15"></div></div>
+            <label class="field-label">Output format</label><div class="format-options"><button class="format-option selected" data-format="original"><b>Original</b><small>Keep source ratio</small></button><button class="format-option" data-format="vertical"><b>9:16</b><small>Vertical crop</small></button></div>
+            <div class="field-note">The preview editor prepares your clip settings. Export rendering is not available in this preview build.</div>
+            <button class="primary-btn full-btn" id="saveClip" disabled>Save clip settings <span>→</span></button>
+            <button class="text-btn" id="backHome">← Back to overview</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="libraryView">
+        <div class="page-heading"><div><div class="eyebrow">YOUR WORK</div><h1>My projects</h1><p class="subhead">Videos and clip settings saved in this browser.</p></div><button class="outline-btn" id="libraryUpload">＋ New project</button></div>
+        <div id="projectList" class="project-list"><div class="empty-library"><div class="empty-library-icon">▤</div><b>No projects yet</b><p>Upload your first video to start a project.</p><button class="primary-btn" id="libraryEmptyUpload">Upload a video →</button></div></div>
+        <div class="notice"><span class="notice-icon">ⓘ</span><div><b>Saved on this device</b><p>This preview stores project details in this browser only. Your video files are not uploaded to a cloud account.</p></div></div>
+      </section>
+
+      <footer class="footer"><span>© 2026 Clipora AI</span><span>Made for creators <span class="footer-star">✦</span></span></footer>
+    </main>
+  </div>
+  <input id="fileInput" type="file" accept="video/mp4,video/quicktime,video/webm,video/x-matroska,.mp4,.mov,.webm,.mkv" hidden>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="helpModal"><div class="modal"><button class="modal-close" id="closeHelp">×</button><div class="eyebrow">CLIPORA PREVIEW</div><h2>What works right now?</h2><p>You can choose a video, preview it, set a clip title and time range, and save project settings in this browser.</p><p>AI highlight detection, cloud uploads, accounts, captions, and rendered exports still need a connected processing backend. This build does not claim those features are live.</p><button class="primary-btn full-btn" id="gotIt">Got it</button></div></div>
+  <script src="/app.js"></script>
+</body>
+</html>
